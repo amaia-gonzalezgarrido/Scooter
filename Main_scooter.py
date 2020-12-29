@@ -346,12 +346,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         elif self.electricButton.isChecked() == True:
             color = pg.mkPen(color=(200, 0, 200))
             self.graphWidget.plot(xaxes,y2axes,label='e-Car',pen=color)
-        # Create plots with pre-defined labels.
-        #fig, ax = plt.subplots()
-        #ax.plot(a, c, 'k--', label='Model length')
-        #ax.plot(a, d, 'k:', label='Data length')
-        #ax.plot(a, c + d, 'k', label='Total message length')
-        #legend = ax.legend(loc='upper center', shadow=True, fontsize='x-large')
 
     def ClearPlot(self):
         self.graphWidget.clear()
