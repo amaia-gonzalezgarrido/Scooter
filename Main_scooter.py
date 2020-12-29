@@ -5,10 +5,10 @@ Last version on 29 December 2020
 @author: Amaia Gonzalez-Garrido
 Available for informational purpose and personal use only
 """
-#IMPORTAMOS LIBRERÍAS PYTHON
+# IMPORTAMOS LIBRERÍAS PYTHON
 # pip install numpy matplotlib pandas PyQt5
+# pip install auto-py-to-exe
 
-import pandas as pd
 import numpy as np
 import math
 from PyQt5 import uic, QtWidgets
@@ -16,6 +16,7 @@ from PyQt5 import QtWidgets
 import pyqtgraph as pg
 import sys
 import os
+import pandas as pd
 from pyqtgraph import PlotWidget
 import matplotlib.pyplot as plt
 from typing import List
@@ -31,7 +32,6 @@ def resource_path(relative_path):
 
 qtCreatorFile = resource_path("./GUI_Scooter.ui")
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
-
 
 '''*********************************************************************************'''
 
@@ -77,17 +77,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.graphWidget.setLabel('bottom', "Time (month)")
         self.graphWidget.showGrid(x=True, y=True, alpha=0.2)
 
-        #self.graphWidget = pg.PlotWidget()
-        #self.graphWidget.setBackground('w')
-        #self.graphWidget.setTitle("Cost assessment", color="k", size="8pt", italic=False )
-        #self.graphWidget.setLabel('left', 'Accumulated cost (€)')
-        #self.graphWidget.setLabel('bottom', 'Time (month)')
-        #self.graphWidget.showGrid(x=True, y=True, alpha=0.2)
-
-        #self.data_line = []
-        #self.pen = pg.mkPen(width=1.5,color='g')
-        #self.data_line.append(self.graphWidget.plot([0], [0], pen=self.pen))
-        #self.graphLayout.addWidget(self.graphWidget)
 
     def Travel_features(self):
 
@@ -96,7 +85,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         #float(self.remainingdistanceValue.text())
         #float(self.monthusageValue.text())
         #float(self.HorizontValue.text())
-
 
         currentdistance=float(self.tripdistanceValue.text())*float(self.tripsValue.text())
         currentdistance=round(currentdistance,2)
