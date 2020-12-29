@@ -47,9 +47,6 @@ Finally, the main results are depicted:
  
  Available for information purposes and personal use only.
  
- This python app and code is my first project in Python environment.
- Feel free to provide feedbacks 
- 
- Thanks,
+
  
  
